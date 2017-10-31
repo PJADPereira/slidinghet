@@ -5,13 +5,6 @@ In this project you can find an example file (acanthodactylusDataset.csv) and th
 
 <h3>Functions</h3>
 
-Some basic Git commands are:
-```
-git status
-git add
-git commit
-```
-
 This script contains a series of functions meant to be used together.
 
 He: Given a data.frame containing a column representing sample CODE and a series of columns representing alleles per locus, calculates expected heterozygosity of the given dataset.
@@ -33,7 +26,8 @@ dataVisualizer: A preliminary function for data visualization, it requires the p
 
 
 <h3>Example:</h3>
-```
+{% highlight R%}
+
 
 source("a_script2.R")
 
@@ -78,4 +72,4 @@ sWindows <- slidingWindow(linearize)  ##sWindows[[1]] contains the sample window
 dataVisualizer (linearize,sWindows)  ##Again this graph should be used just as a preliminary representation
                                      ##The function requires ALOT of work before being usefull in any other way
 
-```
+{% endhighlight %}
