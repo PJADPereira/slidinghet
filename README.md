@@ -5,6 +5,13 @@ In this project you can find an example file (acanthodactylusDataset.csv) and th
 
 <h3>Functions</h3>
 
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
+
 This script contains a series of functions meant to be used together.
 
 He: Given a data.frame containing a column representing sample CODE and a series of columns representing alleles per locus, calculates expected heterozygosity of the given dataset.
