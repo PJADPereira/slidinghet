@@ -281,7 +281,8 @@ dataIntegrity  <- function (data,seq_included=TRUE) {
         print ("After accounting for CODE,SPECIES,LATITUDE,LONGITUDE and SEQUENCE collumns, number of collumns is not pair check microsats table")
       }else{
       print ("Header seems to be correct")
-      print ("Make sure the last collumn of your dataset contains the sequence data")
+      print ("Just make sure the last collumn of your dataset contains the sequence data, as it is not tested here")
+      
       }
     }else {
       
