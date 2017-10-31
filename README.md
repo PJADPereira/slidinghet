@@ -26,10 +26,10 @@ dataVisualizer: A preliminary function for data visualization, it requires the p
 
 
 <h3>Example:</h3>
-{% highlight R%}
 
 
-source("a_script2.R")
+
+'source("a_script2.R")'
 
 input <- read.csv("acanthosDataset.csv", header = T,stringsAsFactors = F)
 
@@ -72,4 +72,4 @@ sWindows <- slidingWindow(linearize)  ##sWindows[[1]] contains the sample window
 dataVisualizer (linearize,sWindows)  ##Again this graph should be used just as a preliminary representation
                                      ##The function requires ALOT of work before being usefull in any other way
 
-{% endhighlight %}
+
