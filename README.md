@@ -27,11 +27,12 @@ dataVisualizer: A preliminary function for data visualization, it requires the p
 
 <h3>Example:</h3>
 
-
-
-'source("a_script2.R")'
+```
+source("a_script2.R")
 
 input <- read.csv("acanthosDataset.csv", header = T,stringsAsFactors = F)
+
+
 
 ##Sample filtering to mimic manuscript dataset
 ##Remember that samples away from the coast were excluded from the sliding window analysis
@@ -39,18 +40,20 @@ input <- input[!(input$CODE %in% c("A765","6443","9999","13266","13267","13268",
 
 
 ##################################
-####Check for that consistency####
+####Check for data consistency####
 ##################################
 
-dataIntegrity(input)                  ##Checks for header integrity. Its just a indication, even if 
-                                      ##it passes, errors might still exist inside your data!!!
+dataIntegrity(input)                  
+##Checks for header integrity. Its just a indication, even if 
+##it passes, errors might still exist inside your data!!!
 
 ##################################
 #######Linearize coordinates######
 ##################################
 
-linearize <- linearCoordinates(input) ##linearize[[1]] contains the input dataframe with a new transformed collumn
-                                      ##linearize[[2]] contains the coefficients of the linear model
+linearize <- linearCoordinates(input)
+##linearize[[1]] contains the input dataframe with a new transformed column
+##linearize[[2]] contains the coefficients of the linear model
 
 
 #################################
@@ -58,18 +61,21 @@ linearize <- linearCoordinates(input) ##linearize[[1]] contains the input datafr
 #################################
 
 
-sWindows <- slidingWindow(linearize)  ##sWindows[[1]] contains the sample window allocation
-                                      ##sWindows[[2]] contains the results per window
-                                      ##Two files are automatically generated at the working directory
-                                      ##sampleGroups.csv which contains sWindows[[1]]
-                                      ##perWindowResults.csv which contains sWindows[[2]]
+sWindows <- slidingWindow(linearize)  
+##sWindows[[1]] contains the sample window allocation
+##sWindows[[2]] contains the results per window
+##Two files are automatically generated at the working directory
+###sampleGroups.csv which contains sWindows[[1]]
+###perWindowResults.csv which contains sWindows[[2]]
 
 
 ################################
 #####Results visualization######
 ################################
 
-dataVisualizer (linearize,sWindows)  ##Again this graph should be used just as a preliminary representation
-                                     ##The function requires ALOT of work before being usefull in any other way
+dataVisualizer (linearize,sWindows)  
+##Again this graph should be used just as a preliminary representation
+##The function requires ALOT of work before being usefull in any other way
 
 
+```
