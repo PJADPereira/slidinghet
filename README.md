@@ -3,6 +3,9 @@ The R script to perform the sliding window analysis performed in Velo-Antón et.
 
 In this project you can find an example file (acanthodactylusDataset.csv) and the RScript to run the analysis (slidingHet.R). A short description of the script can be found below as well as an example on how to use to reproduce the analysis. The script is provided as is.
 
+<h3>Dataset</h3>
+The dataset acanthodactylusDataset.csv contains the genotypes and 16S sequence for all 130 individuals used in Velo-Antón <em>et. al.</em> 2018 <em>in prep</em>
+
 <h3>Functions</h3>
 
 This script contains a series of functions meant to be used together.
