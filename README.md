@@ -9,7 +9,7 @@ The dataset acanthodactylusDataset.csv contains the genotypes and 16S sequence f
 <h3>Example:</h3>
 
 ```
-source("a_script2.R")
+source("slidingHet.R")
 
 input <- read.csv("acanthosDataset.csv", header = T,stringsAsFactors = F)
 
