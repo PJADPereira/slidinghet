@@ -16,7 +16,7 @@ He: Given a data.frame containing a column representing sample CODE and a series
 nDiv: Given a data.frame containing a column representing sample CODE and a column with sequences, calculates the nucleotide diversity of the given dataset.
 
 
-dataIntegrity: A preliminary function meant to test the integrity of the dataset, it checks if the necessary columns are present (CODE,SPECIES,LATITUDE,LONGITUDE). It also checks if the number of allele columns are pair (Diploid individuals)
+dataIntegrity: A preliminary function meant to test the integrity of the dataset, it checks if the necessary columns are present (CODE,SPECIES,LATITUDE,LONGITUDE). It also checks if the number of allele columns are pair (Diploid individuals). Check the format of the acanthodactylusDataset.csv to understand how the script expects the data to be formated.
 
 
 linearCoordinates: This function takes as input the data data.frame, and transforms one of the two axis using a linear model to summarize the spatial distributions of samples into a single axis. Parameters: (data, transformAxis = "Longitude"(default) or "Latitude")
