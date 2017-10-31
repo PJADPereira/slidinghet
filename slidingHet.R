@@ -315,12 +315,9 @@ dataVisualizer <- function(lineardata, slidingWindowList)  {
   fData <- slidingWindowList[[1]]
   slope = lineardata[[2]][[2]]
   intercept = lineardata[[2]][[1]]
-  ##All Data
-  plot (map, xlim= c(min(fData$LONGITUDE)-1,max(fData$LONGITUDE)+1), ylim = c(min(fData$LATITUDE)-1,max(fData$LATITUDE)+1),asp=1)
-  points(fData$LONGITUDE,fData$LATITUDE,col = "red", cex = 0.8, pch= 16)
-  abline(a= intercept, b = slope)
+
   
-  # 1DWindow Attribution
+  #Window Attribution
   pointsMap <- fData[,c(1,2,3,4)]
   for (i in 1:dim(fData)[1]) {
     number <- fData[i,c(5:dim(fData)[2])]
@@ -330,7 +327,7 @@ dataVisualizer <- function(lineardata, slidingWindowList)  {
   }
   
   colPoints <- rainbow(max(pointsMap$Value))
-  plot (map, xlim= c(min(LONGITUDE)-0.5,max(LONGITUDE)+0.5), ylim = c(min(LATITUDE)-1,max(LATITUDE)+1),asp=1)
+  plot (map, xlim= c(min(pointsMap$LONGITUDE)-0.5,max(pointsMap$LONGITUDE)+0.5), ylim = c(min(pointsMap$LATITUDE)-1,max(pointsMap$LATITUDE)+1),asp=1)
   points(pointsMap$LONGITUDE, pointsMap$LATITUDE, col=colPoints[pointsMap$Value], pch=16, cex=1)
   
   colWindow <- rainbow(dim(windows)[1])
