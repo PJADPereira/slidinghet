@@ -1,3 +1,5 @@
+##This script was written in R version 3.2.3
+
 
 he <- function(data) {
   nLoci <- (length(names(data))-1)/2
